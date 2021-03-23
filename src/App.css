@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+ul li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 5px;
+  background-color: #727477;
+}
+li:hover{
+  background-color: red;
+}
 
 .App-logo {
   height: 40vmin;
