@@ -1,31 +1,27 @@
-import React, {useState,useEffect } from 'react'
+import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-function DataFetch1() {
-    const[loading,setLoading] = useState(true)
-    const[error,setError] = useState('')
+function DataFetch() {
     const[post,setPost] = useState({})
+    const[error,setError] = useState('')
 
     useEffect(()=>{
         axios.get('https://jsonplaceholder.typicode.com/posts/1')
         .then(response=>{
-            setLoading(false)
             setPost(response.data)
             setError('')
-
         })
         .catch(error=>{
-            setLoading(false)
             setPost({})
             setError('Bir yanlışlık oldu')
         })
     },[])
+
     return (
         <div>
-           {loading ? 'Loading:':post.body} 
-           {error ? error:null}
+           {error ? error : post.title} 
         </div>
     )
 }
 
-export default DataFetch1
+export default DataFetch
