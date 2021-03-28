@@ -1,13 +1,14 @@
 import "./App.css";
-import Bilgiler from "./Components/Bilgiler";
-import Kitaplar from "./Components/Kitaplar";
-import Sayac from "./Components/Sayac";
+import ClassSayac1 from "./Components/ClassSayac1";
+import HookSayac1 from "./Components/HookSayac1";
+
 
 
 function App() {
   return (
     <div className="App">
-     <Kitaplar/>
+      <HookSayac1/>
+    {/* <ClassSayac1/> */}
     </div>
   );
 }
